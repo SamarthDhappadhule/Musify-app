@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Premium</title>
+    <link rel="stylesheet" href="primium.css">
+    <script defer src="primium.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Musify <span>Premium</span></h1>
+        <p>Get unlimited music, ad-free experience, and offline mode.</p>
+    </header>
+
+    <section class="premium-plans">
+        <div class="plan basic">
+            <h2>Basic</h2>
+            <p>$4.99 / month</p>
+            <ul>
+                <li>Ad-free music</li>
+                <li>High-quality audio</li>
+                <li>Limited skips</li>
+            </ul>
+            <button class="subscribe-btn" onclick="purchase('Basic')">Get Started</button>
+        </div>
+
+        <div class="plan standard">
+            <h2>Standard</h2>
+            <p>$9.99 / month</p>
+            <ul>
+                <li>Unlimited skips</li>
+                <li>Offline downloads</li>
+                <li>High-quality audio</li>
+            </ul>
+            <button class="subscribe-btn" onclick="purchase('Standard')">Choose Plan</button>
+        </div>
+
+        <div class="plan premium">
+            <h2>Popular</h2>
+            <p>$14.99 / month</p>
+            <ul>
+                <li>Family Sharing</li>
+                <li>Exclusive Content</li>
+                <li>Dolby Atmos Sound</li>
+            </ul>
+            <button class="subscribe-btn" onclick="purchase('Primium')">Go Premium</button>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="question">What is Musify Premium?</div>
+            <div class="answer">Musify Premium removes ads, enables offline playback, and offers high-quality audio.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Can I cancel anytime?</div>
+            <div class="answer">Yes, you can cancel anytime without penalties.</div>
+        </div>
+    </section>
+    <footer>
+        &copy 2025 Musify Music App . All rights reserved .
+    </footer>
+</body>
+</html>

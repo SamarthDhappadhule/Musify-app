@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicfy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="musify.css">
+</head>
+
+<body>
+
+
+    <div class="main">
+
+        <div class="container">
+            <div class="sidebar1">
+                <h1>Musify</h1>
+                <ul>
+                    <a href="musify.html">
+                        <li> <i class="fa-solid fa-address-card"></i>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li><i class="fa-solid fa-house"></i>About</li>
+                    </a>
+                    <a href="support.html">
+                        <li><i class="fa-solid fa-phone"></i>Support</li>
+                    </a>
+                    <a href="primium.html"></i>
+                        <li> <i class="fa-solid fa-shield-halved"></i>Primium</li>
+                    </a>
+                </ul>
+
+            </div>
+            <div class="menubar">
+                <ul>
+                    <i id="cross" onclick=remove() class="fa-solid fa-xmark"></i>
+                    <a href="musify.html">
+                        <li> <i class="fa-solid fa-address-card"></i>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li><i class="fa-solid fa-house"></i>About</li>
+                    </a>
+                    <a href="support.html">
+                        <li><i class="fa-solid fa-phone"></i>Support</li>
+                    </a>
+                    <a href="primium.html"></i>
+                        <li> <i class="fa-solid fa-shield-halved"></i>Primium</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="sidebar2">
+                <h1 id="heading1">Popular Artists <i id="bar" onclick=show() class="fa-solid fa-bars"></i></h1>
+                <div class="row1">
+                    <div id="card1" class="card">
+                        <img src="img1.jpeg">
+                        <p id="id1">Pritam</p>
+                        <p id="id2">Artist</p>
+                    </div>
+                    <div id="card2" class="card">
+                        <img src="img2.webp">
+                        <p id="id1">KK</p>
+                        <p id="id2">Artist</p>
+                    </div>
+
+                    <div id="card3" class="card">
+                        <img src="img3.jpeg">
+                        <p id="id1">A.R.Rahaman</p>
+                        <p id="id2">Artist</p>
+                    </div>
+
+                    <div id="card4" class="card">
+                        <img src="img4.jpg">
+                        <p id="id1">Arjit Singh</p>
+                        <p id="id2">Artist</p>
+                    </div>
+
+                    <div id="card5" class="card">
+                        <img src="img5.jpeg">
+                        <p id="id1">Atif Aslam</p>
+                        <p id="id2">Artist</p>
+                    </div>
+                    <div id="card6" class="card">
+                        <img src="img6.png">
+                        <p id="id1">Sonu Nigam</p>
+                        <p id="id2">Artist</p>
+                    </div>
+                </div>
+                <h1 id="heading2">Popular Albums and Singers</h1>
+                <div class="row2">
+                    <div class="crds" onclick="playSong('musics/tum hi ho.mp3 '  , 'Tum Hi Ho')">
+                        <img src="photo1.jpg">
+                        <p id="id3">Tum Hi Ho</p>
+                        <p id="id4">Arjit Singh,Ankit Tiwari</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/a dil hai mushkil.mp3 '  , 'A Dil Hai Mushkil' )">
+                        <img src="photo2.jpg">
+                        <p id="id3">A Dil Hai Mushkil</p>
+                        <p id="id4">Pritam</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/humari adhuri Kahani.mp3 '  , 'Humari Adhuri Kahani' )">
+                        <img src="photo3.jpg">
+                        <p id="id3"> Adhuri Kahani</p>
+                        <p id="id4">Jeet Ganguli </p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/jo tum mere ho.mp3 '  , 'Jo Tum Mere Ho' )">
+                        <img src="photo4.jpeg">
+                        <p id="id3">Jo Tum Mere Ho</p>
+                        <p id="id4">Anuv Jain</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/Sidhat.mp3 '  , 'Shiddat' )">
+                        <img src="photo5.jpg">
+                        <p id="id3">Shiddat</p>
+                        <p id="id4">Manan Bhardwaj</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/jab tak.mp3 '  , 'Jab Tak' )">
+                        <img src="photo6.jpg">
+                        <p id="id3">Jab Tak</p>
+                        <p id="id4">Amaal Malik</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/pehle bhi main.mp3 '  , 'Pehle Bhi Main' )">
+                        <img src="photo7.jpg">
+                        <p id="id3">Pehle Bhi Main</p>
+                        <p id="id4">Vishal Mishra</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/agar tum sath ho.mp3 '  , 'Agar Tum Sath Ho' )">
+                        <img src="photo8.png">
+                        <p id="id3">Agar Tum Sath Ho</p>
+                        <p id="id4">A.R.Rahaman</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/hawayein.mp3 '  , 'Hawayein' )">
+                        <img src="photo9.jpg">
+                        <p id="id3">Hawayein</p>
+                        <p id="id4">Arjit Singh,Pritam</p>
+                    </div>
+
+                </div>
+
+                <div class="row3">
+                    <div class="crds" onclick="playSong('musics/khulke jeene ka.mp3 '  , 'Khule ke Jeene Ka Tarika' )">
+                        <img src="photo11.jpg">
+                        <p id="id3">Khule Jeene Ka </p>
+                        <p id="id4">A.R Rahaman</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/heeriye.mp3 '  , 'Heeriye' )">
+                        <img src="photo12.webp">
+                        <p id="id3">Heeriye</p>
+                        <p id="id4">Shreyas Ghoshal </p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/badtamiz dil.mp3 '  , 'Badtameez Dil' )">
+                        <img src="photo13.jpg">
+                        <p id="id3">Badtameez Dil</p>
+                        <p id="id4">Pritam , Benny Dayal</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/makhna.mp3 '  , 'Makhna' )">
+                        <img src="photo14.jpg">
+                        <p id="id3">Makhna</p>
+                        <p id="id4">Tanish Badganchi</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/matargasti.mp3 '  , 'Matargashti' )">
+                        <img src="photo15.jpeg">
+                        <p id="id3">Matargashti</p>
+                        <p id="id4">Mohit Chauhan</p>
+                    </div>
+                    <div class="crds"
+                        onclick="playSong('musics/kashmir main tu Kanyakumari.mp3 '  , 'Kashmier Main Tu Kanyakumari' )">
+                        <img src="photo16.jpg">
+                        <p id="id3">Kanyakumari</p>
+                        <p id="id4">Arjit Singh , Niti Mohan</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/chammak chalo.mp3 '  , 'Chammak Chalo' )">
+                        <img src="photo17.jpg">
+                        <p id="id3">Chammak Chalo</p>
+                        <p id="id4">Akon , Hamiska Iyer</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/illahi.mp3 '  , 'Illahi' )">
+                        <img src="photo18.jpg">
+                        <p id="id3">Illahi</p>
+                        <p id="id4">Pritam , Arjit Singh</p>
+                    </div>
+                    <div class="crds" onclick="playSong('musics/sooraj dooba hain.mp3 '  , 'Sooraj Dooba Hain' )">
+                        <img src="photo19.jpg">
+                        <p id="id3">Sooraj Dooba Hain</p>
+                        <p id="id4">Aditi & Aditi Singh</p>
+                    </div>
+                </div>
+
+                <h1 id="heading3">Marathi Trending </h1>
+
+                <div class="row4">
+                    <div class="row4_cards" onclick="playSong('musics/maay bhavani.mp3 '  , 'Maay Bhavani' )">
+                        <img src="photo21.jpg">
+                        <p id="id5">Maay Bhavani</p>
+                        <p id="id6">Sukhwinder Singh</p>
+                    </div>
+                    <div class="row4_cards" onclick="playSong('musics/ved tuja.mp3'  , 'Ved Tujha' )">
+                        <img src="photo22.jpg">
+                        <p id="id5">Ved Tujha</p>
+                        <p id="id6">Ajay-Atul Gogavle</p>
+                    </div>
+                    <div class="row4_cards" onclick="playSong('musics/dhaga dhaga.mp3'  , 'Dhaga Dhaga' )">
+                        <img src="photo23.jpg">
+                        <p id="id5">Dagha Dagha</p>
+                        <p id="id6">Harsh Warve</p>
+                    </div>
+                    <div class="row4_cards" onclick="playSong('musics/gulabi sadi.mp3'  , 'Gulabi Sadi' )">
+                        <img src="photo24.jpg">
+                        <p id="id5">Gulabi Sadi</p>
+                        <p id="id6">Sanju Rathod</p>
+                    </div>
+                    <div class="row4_cards" onclick="playSong('musics/tula japnar ahe.mp3 '  , 'Tula Japnar Ahe' )">
+                        <img src="photo25.jpg">
+                        <p id="id5">Tula Japnar Ahe</p>
+                        <p id="id6">Adarsh Shinde</p>
+                    </div>
+                    <div class="row4_cards" onclick="playSong('musics/chandra.mp3 '  , 'Chandra ' )">
+                        <img src="photo26.jpg">
+                        <p id="id5">Chandra</p>
+                        <p id="id6">Ajay-Atual Gogavle</p>
+                    </div>
+
+                </div>
+
+                <div class="row5">
+                    <div class="row5_cards" onclick="playSong('musics/kakan.mp3'  , 'Kakan' )">
+                        <img src="photo27.jpg">
+                        <p id="id5">Kakan</p>
+                        <p id="id6">Shankar Mahadevan</p>
+                    </div>
+                    <div class="row5_cards" onclick="playSong('musics/sairat zhal ji.mp3'  , 'Sairat Zhal Ji' )">
+                        <img src="photo28.jpg">
+                        <p id="id5">Sairat Zhal Ji</p>
+                        <p id="id6">Adarsh shinde</p>
+                    </div>
+                    <div class="row5_cards" onclick="playSong('musics/sukha kalale.mp3'  , 'Sukha Kalale' )">
+                        <img src="photo29.jpg">
+                        <p id="id5">Sukha Kalale</p>
+                        <p id="id6">Ajay-Atual Gogavle</p>
+                    </div>
+                    <div class="row5_cards" onclick="playSong('musics/bhijun gela vara.mp3'  , 'Bhijun Gela Vara' )">
+                        <img src="photo30.jpg">
+                        <p id="id5">Bhijun Gela Vara</p>
+                        <p id="id6">Kshitij Tere, Nihira </p>
+                    </div>
+                    <div class="row5_cards" onclick="playSong('musics/swapna chalun ale.mp3 '  , 'Swapna Chalun Ale')">
+                        <img src="photo31.jpg">
+                        <p id="id5">Swapna Chalun Ale</p>
+                        <p id="id6">Sonu Nigam</p>
+                    </div>
+                    <div class="row5_cards" onclick="playSong('musics/mala ved lagle.mp3'  , 'Mala Ved Lagle' )">
+                        <img src="photo32.jpg">
+                        <p id="id5">Mala Ved Lagle</p>
+                        <p id="id6">Swapnali Bandodkar</p>
+                    </div>
+
+                </div>
+
+                <div class="artist">
+
+                    <div class="hero">
+
+                        <img src="img1.jpeg">
+
+                        <div class="name-view">
+                            <h3 id="name">Pritam</h3>
+                            <h3 id="view">23,34,466 monthly viwers</h3>
+                        </div>
+                        <div class="back-next">
+                            <i id="back" class="fa-solid fa-backward"></i>
+                            <i id="next" class="fa-solid fa-chevron-right"></i>
+                        </div>
+
+                    </div>
+
+                    <table align="center" cellpadding="10">
+                        <tr style="color: lightgrey; height: 50px;">
+                            <td id="col1" width="7%" align="center" style="border-bottom: 1px solid grey;"><b>#</b></td>
+                            <td id="col2" style="border-bottom: 1px solid grey;"><b>TITLE</b></td>
+                            <td id="col4" style="border-bottom: 1px solid grey;"><b>ARTIST</b></td>
+                            <td id="col5" style="border-bottom: 1px solid grey;"><b>DURATION</b></td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">1</td>
+                            <td id="col2">Illahi</td>
+                            <td id="col4">Pritam</td>
+                            <td id="col5"> 03 : 23</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Illahi.mp3" type="audio/mpeg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">2</td>
+                            <td id="col2">Kesariya</td>
+                            <td id="col4">Pritam</td>
+                            <td id="col5">04 : 45</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Kesariya.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">3</td>
+                            <td id="col2">Saude Bazi</td>
+                            <td id="col4">Pritam</td>
+                            <td id="col5">06 : 48</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Saude Bazi.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">4</td>
+                            <td id="col2">Shayad</td>
+                            <td id="col4">Pritam</td>
+                            <td id="col5">03 : 10</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Shayad.mp3" type="audio/mpeg" controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">5</td>
+                            <td id="col2">Tu Jaane Na</td>
+                            <td id="col4">Pritam</td>
+                            <td id="col5">05 : 37</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Tu Jaane Na.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">6</td>
+                            <td id="col2">Apna Bana Le</td>
+                            <td id="col4">Pritam</td>
+                            <td id="col5">03 : 24</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Apna Bana Le.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="artist2">
+
+                    <div class="hero">
+                        <img src="img2.webp">
+                        <div class="name-view">
+                            <h3 id="name">KK</h3>
+                            <h3 id="view">11,64,236 monthly viwers</h3>
+                        </div>
+                        <div class="back-next2">
+                            <i id="back2" class="fa-solid fa-backward"></i>
+                            <i id="next2" class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <table align="center" cellpadding="10">
+                        <tr style="color: lightgrey; height: 50px;">
+                            <td id="col1" width="7%" align="center" style="border-bottom: 1px solid grey;"><b>#</b></td>
+                            <td id="col2" style="border-bottom: 1px solid grey;"><b>TITLE</b></td>
+                            <td id="col3" style="border-bottom: 1px solid grey;"><b>MOVIE</b></td>
+                            <td id="col4" style="border-bottom: 1px solid grey;"><b>ARTIST</b></td>
+                            <td id="col5" style="border-bottom: 1px solid grey;"><b>DURATION</b></td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">1</td>
+                            <td id="col2">Aankhon Mein Teri</td>
+
+                            <td id="col4">KK</td>
+                            <td id="col5"> 04 : 20</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Aankhon Mein Teri.mp3" type="audio/mpeg"
+                                    controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">2</td>
+                            <td id="col2">Dil Ibadat</td>
+
+                            <td id="col4">KK</td>
+                            <td id="col5">05 : 33</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Dil Ibadat.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">3</td>
+                            <td id="col2">Dil Kyun Yeh Mera</td>
+
+                            <td id="col4">KK</td>
+                            <td id="col5">05 : 32</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Dil Kyun Yeh Mera.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">4</td>
+                            <td id="col2">Kaho Na Kaho</td>
+
+                            <td id="col4">KK</td>
+                            <td id="col5">04 : 25</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Kaho Na Kaho.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">5</td>
+                            <td id="col2">Khuda Jaane</td>
+
+                            <td id="col4">KK</td>
+                            <td id="col5">05 : 30</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Khuda Jaane.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">6</td>
+                            <td id="col2">Zara Sa</td>
+
+                            <td id="col4">KK</td>
+                            <td id="col5">03 : 48</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Zara Sa.mp3" type="audio/mpeg" controls></audio><br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="artist3">
+                    <div class="hero">
+                        <img src="img3.jpeg">
+                        <div class="name-view">
+                            <h3 id="name">A.R.Rahaman</h3>
+                            <h3 id="view">46,58,821 monthly viwers</h3>
+                        </div>
+                        <div class="back-next3">
+                            <i id="back3" class="fa-solid fa-backward"></i>
+                            <i id="next3" class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <table align="center" cellpadding="10">
+                        <tr style="color: lightgrey; height: 50px;">
+                            <td id="col1" width="7%" align="center" style="border-bottom: 1px solid grey;"><b>#</b></td>
+                            <td id="col2" style="border-bottom: 1px solid grey;"><b>TITLE</b></td>
+                            <td id="col4" style="border-bottom: 1px solid grey;"><b>ARTIST</b></td>
+                            <td id="col5" style="border-bottom: 1px solid grey;"><b>DURATION</b></td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">1</td>
+                            <td id="col2">Dildaara</td>
+                            <td id="col4">A.R.Rahaman</td>
+                            <td id="col5"> 04 : 30</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Dildaara.mp3" type="audio/mpeg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">2</td>
+                            <td id="col2">Pehla Pyaar</td>
+                            <td id="col4">A.R.Rahaman</td>
+                            <td id="col5">04 : 32</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Pehla Pyaar.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">3</td>
+                            <td id="col2">Khuleke Jeene Ka</td>
+                            <td id="col4">A.R.Rahaman</td>
+                            <td id="col5">04 : 00</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Khuleke Jeene Ka.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">4</td>
+                            <td id="col2">Subhanallah</td>
+                            <td id="col4">A.R.Rahaman</td>
+                            <td id="col5">03 : 25</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Subhanallah.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">5</td>
+                            <td id="col2">Qaafirana</td>
+                            <td id="col4">A.R.Rahaman</td>
+                            <td id="col5">06 : 15</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Qaafirana.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">6</td>
+                            <td id="col2">Kun Faya Kun</td>
+                            <td id="col4">A.R.Rahaman</td>
+                            <td id="col5">06 : 20</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Kun Faya Kun.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="artist4">
+                    <div class="hero">
+                        <img src="img4.jpg">
+                        <div class="name-view">
+                            <h3 id="name">Arjit Singh</h3>
+                            <h3 id="view">17,37,493 monthly viwers</h3>
+                        </div>
+                        <div class="back-next4">
+                            <i id="back4" class="fa-solid fa-backward"></i>
+                            <i id="next4" class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <table align="center" cellpadding="10">
+                        <tr style="color: lightgrey; height: 50px;">
+                            <td id="col1" width="7%" align="center" style="border-bottom: 1px solid grey;"><b>#</b></td>
+                            <td id="col2" style="border-bottom: 1px solid grey;"><b>TITLE</b></td>
+                            <td id="col4" style="border-bottom: 1px solid grey;"><b>ARTIST</b></td>
+                            <td id="col5" style="border-bottom: 1px solid grey;"><b>DURATION</b></td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">1</td>
+                            <td id="col2">Kalank</td>
+                            <td id="col4">A.Singh</td>
+                            <td id="col5"> 05 : 25</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Kalank.mp3" type="audio/mpeg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">2</td>
+                            <td id="col2">Dil Jhoom</td>
+                            <td id="col4">A.Singh</td>
+                            <td id="col5">05 : 20</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Dil Jhoom.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">3</td>
+                            <td id="col2">Dekha Hazaro Dafaa</td>
+                            <td id="col4">A.Singh</td>
+                            <td id="col5">03 : 33</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Dekha Hazaro Dafaa.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">4</td>
+                            <td id="col2">Ae Dil Hai Mushkil</td>
+                            <td id="col4">A.Singh</td>
+                            <td id="col5">05 : 06</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Ae Dil Hai Mushkil.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">5</td>
+                            <td id="col2">O Maahi</td>
+                            <td id="col4">A.Singh</td>
+                            <td id="col5">04 : 05</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/O Maahi.mp3" type="audio/mpeg" controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">6</td>
+                            <td id="col2">Kesariya</td>
+                            <td id="col4">A.Singh</td>
+                            <td id="col5">04 : 45</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Kesariya.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">7</td>
+                            <td id="col2">Apna Bana Le</td>
+                            <td id="col4">A.Singh</td>
+                            <td id="col5">03 : 24</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Apna Bana Le.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">8</td>
+                            <td id="col2">Tumko Chaahunga</td>
+                            <td id="col4">A.Singh</td>
+                            <td id="col5">06 : 01</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Phir Bhi Tumko Chaahunga.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="artist5">
+                    <div class="hero">
+                        <img src="img5.jpeg">
+                        <div class="name-view">
+                            <h3 id="name">Atif Aslam</h3>
+                            <h3 id="view">26,49,374 monthly viwers</h3>
+                        </div>
+                        <div class="back-next5">
+                            <i id="back5" class="fa-solid fa-backward"></i>
+                            <i id="next5" class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <table align="center" cellpadding="10">
+                        <tr style="color: lightgrey; height: 50px;">
+                            <td id="col1" width="7%" align="center" style="border-bottom: 1px solid grey;"><b>#</b></td>
+                            <td id="col2" style="border-bottom: 1px solid grey;"><b>TITLE</b></td>
+                            <td id="col4" style="border-bottom: 1px solid grey;"><b>ARTIST</b></td>
+                            <td id="col5" style="border-bottom: 1px solid grey;"><b>DURATION</b></td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">1</td>
+                            <td id="col2">Dekhte Dekhte</td>
+                            <td id="col4">A.Aslam</td>
+                            <td id="col5"> 04 : 20</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Dekhte Dekhte.mp3" type="audio/mpeg"
+                                    controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">2</td>
+                            <td id="col2">Dil Meri Na Sune</td>
+                            <td id="col4">A.Aslam</td>
+                            <td id="col5">04 : 21</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Dil Meri Na Sune.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">3</td>
+                            <td id="col2">Main Rang Sharbaton Ka</td>
+                            <td id="col4">A.Aslam</td>
+                            <td id="col5">04 : 24</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Main Rang Sharbaton Ka.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">4</td>
+                            <td id="col2">Tere Sang Yaara</td>
+                            <td id="col4">A.Aslam</td>
+                            <td id="col5">02 : 20</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Tere Sang Yaara.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">5</td>
+                            <td id="col2">Zaalima</td>
+                            <td id="col4">A.Aslam</td>
+                            <td id="col5">05 : 06</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Zaalima.mp3" type="audio/mpeg" controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">6</td>
+                            <td id="col2">Tera Hone Laga Hoon</td>
+                            <td id="col4">A.Aslam</td>
+                            <td id="col5">04 : 58</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Tera Hone Laga Hoon.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">7</td>
+                            <td id="col2">Jeene Laga Hoon</td>
+                            <td id="col4">A.Aslam</td>
+                            <td id="col5">03 : 21</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Jeene Laga Hoon.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="artist6">
+
+                    <div class="hero">
+                        <img src="img6.png">
+                        <div class="name-view">
+                            <h3 id="name">Sonu Nigam</h3>
+                            <h3 id="view">19,46,364 monthly viwers</h3>
+                        </div>
+                        <div class="back-next6">
+                            <i id="back6" class="fa-solid fa-backward"></i>
+                            <i id="next6" class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <table align="center" cellpadding="10">
+                        <tr style="color: lightgrey; height: 50px;">
+                            <td id="col1" width="7%" align="center" style="border-bottom: 1px solid grey;"><b>#</b></td>
+                            <td id="col2" style="border-bottom: 1px solid grey;"><b>TITLE</b></td>
+                            <td id="col3" style="border-bottom: 1px solid grey;"><b>MOVIE</b></td>
+                            <td id="col4" style="border-bottom: 1px solid grey;"><b>ARTIST</b></td>
+                            <td id="col5" style="border-bottom: 1px solid grey;"><b>DURATION</b></td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">1</td>
+                            <td id="col2">Main Agar Kahoon</td>
+
+                            <td id="col4">Sonu Nigam</td>
+                            <td id="col5"> 03 : 54</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Main Agar Kahoon.mp3" type="audio/mpeg"
+                                    controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">2</td>
+                            <td id="col2">Kal Ho Naa Ho</td>
+
+                            <td id="col4">Sonu Nigam</td>
+                            <td id="col5">04 : 47</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Kal Ho Naa Ho.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">3</td>
+                            <td id="col2">Love Is A Waste Of Time</td>
+
+                            <td id="col4">Sonu Nigam</td>
+                            <td id="col5">04 : 16</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Love Is A Waste Of Time.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">4</td>
+                            <td id="col2">Do Pal</td>
+
+                            <td id="col4">Sonu Nigam</td>
+                            <td id="col5">02 : 13</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Do Pal.mp3" type="audio/mpeg" controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">5</td>
+                            <td id="col2">Mere haath Mein</td>
+                            <td id="col4">Sonu Nigam</td>
+                            <td id="col5">04 : 42</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Mere haath  Mein.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="col1" align="center">6</td>
+                            <td id="col2">Bole Chudiyan</td>
+
+                            <td id="col4">Sonu Nigam</td>
+                            <td id="col5">06 : 43</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px solid grey;"></td>
+                            <td colspan="4" align="left" style="border-bottom: 1px solid grey;">
+                                <audio preload="none" src="artitsts/Bole Chudiyan.mp3" type="audio/mpeg"
+                                    controls></audio><br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <hr>
+                <div class="foot">
+                    <ul>
+                        <p>Follow Us</p>
+                        <a href="https://www.instagram.com/musify.official?igsh=bXc2bDBzczVycDBp">Instagram</a>
+                        <a href="https://www.facebook.com/musifyapp?mibextid=ZbWKwL">Facebook</a>
+                        <a href="https://x.com/musifyme?t=Pat7WlDA4Iijw9gsamgzDA&s=09">Twitter</a>
+                    </ul>
+                    <ul>
+                        <p>Company</p>
+                        <a href="about.html">About</a>
+                        <a href="support.html"> Support</a>
+
+                    </ul>
+                    <ul>
+                        <p>Plans</p>
+                        <a href="primium.html">Primium Family</a>
+                        <a href="studentprimium.html">Primium Student</a>
+                        <a href="musifyfree.html">Musify Free</a>
+                    </ul>
+
+                </div>
+                <div class="copy">
+                    <hr> <i class="fa-regular fa-copyright"></i>2025 Musify Music App . All rights reserved .
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Music Player Bar -->
+
+    <div class="music-bar">
+
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+
+        <p id="song-title">Select a song...</p>
+        <input type="range" id="progress-bar" value="0" maxvalue="100">
+
+        <div class="btns">
+            <button onclick="prevSong()"><i class="fa-solid fa-backward"></i></button>
+            <button id="play-pause" onclick="togglePlay()">▶</button>
+            <button onclick="nextSong()"><i class="fa-solid fa-forward"></i></button>
+        </div>
+    </div>
+
+    <script src="musify.js"></script>
+
+</body>
+
+</html>

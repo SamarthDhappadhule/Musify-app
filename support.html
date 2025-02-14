@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Support</title>
+  <link rel="stylesheet" href="support.css">
+</head>
+<body>
+  <header>
+    <h1>Musify <span>Support</span></h1>
+</header>
+  <main>
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>How do I reset my password?</h3>
+        <p>Go to the Musify login page, click "Forgot Password," and follow the instructions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is my music not playing?</h3>
+        <p>Check your internet connection or restart the app. If the issue persists, contact support.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I cancel my subscription?</h3>
+        <p>Visit your account page on Musify and follow the cancellation instructions.</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>If you need further assistance, feel free to reach out to us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@spotify.com">support@spotify.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+1-800-123-4567">+1-800-123-4567</a></li>
+      </ul>
+    </section>
+
+    <section class="problem-form">
+      <h2>Submit Your Problem</h2>
+      <form id="problemForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="problem">Describe your problem:</label>
+        <textarea id="problem" name="problem" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy 2025 Musify Music App . All rights reserved .
+</footer>
+
+  <script src="support.js"></script>
+</body>
+</html>
