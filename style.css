@@ -407,6 +407,47 @@
     display: none;
 }
 
+.row6{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    flex-wrap: wrap;
+ }
+ .row6_cards{
+     width: 47%;
+     margin: 10px 10px 0px;
+     display: flex;
+     height: 60px;
+     align-items: center;
+     border-radius:5px;
+     cursor: pointer;
+
+
+     #id5{
+        width: 200px;
+     }
+ }
+ .row6_cards img{
+     height: 50px;
+     width: 50px;
+     border-radius: 5px;
+
+     margin: 0px 10px 0px 20px;
+ }
+ #play{
+    margin-left: 35%;
+ }
+ .row6_cards:hover{
+    background-color: #1a1a1a;
+ }
+ .sidebar2 #heading4 {
+    font-size: 25px;
+    margin: 20px 0 20px 20px;
+    background-color: #161414;
+}
+
+
+
 .foot {
 
     margin-top: 0px;
@@ -588,7 +629,7 @@ hr {
     }
 
     .back-next {
-        margin-left: 32%;
+        margin-left: 33%;
         display: flex;
         flex-direction: column;
     }
@@ -604,6 +645,7 @@ hr {
         color: black;
         cursor: pointer;
         padding-right: 10px;
+        
 
     }
 
@@ -624,25 +666,25 @@ hr {
     }
 
     .back-next2 {
-        margin-left: 33%;
+        margin-left: 34%;
         display: flex;
         flex-direction: column;
     }
 
     .back-next3 {
-        margin-left: 2%;
+        margin-left: 3%;
         display: flex;
         flex-direction: column;
     }
 
     .back-next4 {
-        margin-left: 17%;
+        margin-left: 18%;
         display: flex;
         flex-direction: column;
     }
 
     .back-next5 {
-        margin-left: 17%;
+        margin-left: 18%;
         display: flex;
         flex-direction: column;
     }
@@ -746,6 +788,9 @@ button {
     cursor: pointer;
     margin: 0px 10px;
 }
+.btns{
+    display: flex;
+}
 
 .music-bar button:hover {
 
@@ -845,6 +890,11 @@ button {
 
     .sidebar2 #heading3 {
         font-size: 17px;
+    }
+   .sidebar2 #heading4 {
+        font-size: 17px;
+        margin: 20px 0 20px 20px;
+        background-color: #161414;
     }
 
     .menubar {
@@ -1000,7 +1050,7 @@ button {
     .row2 .crds {
         margin-top: 10px;
         margin-left: 10px;
-        height: 200px;
+        height: 190px;
         width: 150px;
         border-radius: 10px;
         cursor: none;
@@ -1035,7 +1085,7 @@ button {
     .row3 .crds {
         margin-top: 10px;
         margin-left: 10px;
-        height: 200px;
+        height: 190px;
         width: 150px;
         cursor: none;
         border-radius: 10px;
@@ -1084,7 +1134,7 @@ button {
     .row4 .row4_cards {
         margin-top: 10px;
         margin-left: 0px;
-        height: 190px;
+        height: 180px;
         width: 130px;
         cursor: none;
         border-radius: 10px;
@@ -1122,7 +1172,7 @@ button {
     .row5 .row5_cards {
         margin-top: 10px;
         margin-left: 0px;
-        height: 200px;
+        height: 180px;
         width: 130px;
         cursor: none;
         border-radius: 10px;
@@ -1141,6 +1191,42 @@ button {
     .row5::-webkit-scrollbar {
         display: none;
     }
+
+    .row6{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+     }
+     .row6_cards{
+         width: 100%;
+         margin: 10px 0px 0px;
+         display: flex;
+         height: 60px;
+         align-items: center;
+        cursor: none;
+         #id5{
+            width: 140px;
+            padding-right: 10px;
+         }
+     }
+     .row6 .row6_cards:hover{
+        background: none;
+        transform:none
+    }
+    .row6 .row6_cards:active{
+        background: rgb(43, 41, 41);
+        transform: scale(1.01);
+    }
+     .row6_cards img{
+         height: 50px;
+         width: 50px;
+         border-radius: 10px;
+
+         margin: 0px 10px 0px 20px;
+     }
+     #play{
+        margin-left: 132px;
+     }
 
     .foot ul a {
         cursor: none;
@@ -1220,34 +1306,6 @@ button {
         }
 
 
-        /* #col1 {
-            padding-left: 5px;
-            font-size: small;
-        }
-
-        #col2 {
-            padding-left: 3%;
-            font-size: small;
-            width: 30%;
-        }
-
-        #col3 {
-
-            display: none;
-        }
-
-        #col4 { 
-            padding-left: 5%;
-            font-size: small;
-            width: 20%;
-
-        }
-
-        #col5 {
-            width: 20%;
-            padding-left: 5%;
-            font-size: small;
-        } */
 
 
 
@@ -1283,7 +1341,7 @@ button {
         }
 
         .back-next {
-            margin-left: 10%;
+            margin-left: 13%;
             display: flex;
             font-size: 12px;
             flex-direction: column;
@@ -1320,31 +1378,31 @@ button {
         }
 
         .back-next2 {
-            margin-left: 12%;
+            margin-left: 13%;
             display: flex;
             flex-direction: column;
         }
 
         .back-next3 {
-            margin-left: 11%;
+            margin-left: 13%;
             display: flex;
             flex-direction: column;
         }
 
         .back-next4 {
-            margin-left: 12%;
+            margin-left: 13%;
             display: flex;
             flex-direction: column;
         }
 
         .back-next5 {
-            margin-left: 10%;
+            margin-left: 13%;
             display: flex;
             flex-direction: column;
         }
 
         .back-next6 {
-            margin-left: 11%;
+            margin-left: 13%;
             display: flex;
             flex-direction: column;
         }
@@ -1685,11 +1743,47 @@ button {
         border-radius: 10px;
     }
 
-
-
     .row5::-webkit-scrollbar {
         display: none;
     }
+
+    .row6{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+     }
+     .row6_cards{
+         width: 100%;
+         margin: 10px 0px 0px;
+         display: flex;
+         height: 60px;
+         cursor: none;
+         align-items: center;
+
+         #id5{
+            width: 140px;
+            padding-right: 10px;
+         }
+     }
+     .row6 .row6_cards:hover{
+        background: none;
+        transform:none
+    }
+    .row6 .row6_cards:active{
+        background: rgb(43, 41, 41);
+        transform: scale(1.01);
+    }
+     .row6_cards img{
+         height: 50px;
+         width: 50px;
+         border-radius: 10px;
+
+         margin: 0px 10px 0px 20px;
+     }
+     #play{
+        margin-left: 230px;
+     }
+
 
     .foot ul a {
         cursor: none;
@@ -2046,6 +2140,45 @@ button {
 
     }
 
+    .row6{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+     }
+     .row6_cards{
+         width: 100%;
+         margin: 10px 0px 0px;
+         display: flex;
+         height: 60px;
+         align-items: center;
+         cursor: none;
+
+
+         #id5{
+            width: 140px;
+            padding-right: 10px;
+         }
+     }
+     .row6 .row6_cards:hover{
+        background: none;
+        transform:none
+    }
+    .row6 .row6_cards:active{
+        background: rgb(43, 41, 41);
+        transform: scale(1.01);
+    }
+     .row6_cards img{
+         height: 50px;
+         width: 50px;
+         border-radius: 10px;
+
+         margin: 0px 10px 0px 20px;
+     }
+     #play{
+        margin-left: 260px;
+     }
+
+
     .foot ul a {
         cursor: none;
     }
@@ -2290,6 +2423,15 @@ button {
     .row1::-webkit-scrollbar {
         display: none;
 
+    }
+
+    .row6 .row6_cards:hover{
+        background: none;
+        transform:none
+    }
+    .row6 .row6_cards:active{
+        background: rgb(43, 41, 41);
+        transform: scale(1.01);
     }
 
     .hero {

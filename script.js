@@ -19,14 +19,16 @@ const artist = document.querySelector(".artist");
 const heading1 = document.querySelector("#heading1");
 const heading2 = document.querySelector("#heading2");
 const heading3 = document.querySelector("#heading3");
+const heading4 = document.querySelector("#heading4");
 const row1 = document.querySelector(".row1");
 const row2 = document.querySelector(".row2 ");
 const row3 = document.querySelector(".row3");
 const row4 = document.querySelector(".row4");
 const row5 = document.querySelector(".row5");
+const row6 = document.querySelector(".row6");
 const card1 = document.querySelector("#card1");
 const main = document.querySelector(".main");
-
+const song_title=document.querySelector("#song-title");
 
 
 
@@ -40,16 +42,24 @@ function artist_data() {
     heading3.style.display = "none";
     heading3.style.margin = "0px";
 
+    heading4.style.display = "none";
+    heading4.style.margin = "0px";
+
 
     row1.style.display = "none";
     row2.style.display = "none";
     row3.style.display = "none";
     row4.style.display = "none";
     row5.style.display = "none";
+    row6.style.display = "none";
+
 
     main.style.height = "100vh";
  
     audio.pause();
+    document.getElementById("play-pause").innerHTML = "<i class='fa-solid fa-play'></i>";
+
+    song_title.style.innerText="select a song";
 }
 
 function back_data() {
@@ -62,15 +72,20 @@ function back_data() {
     heading3.style.display = "flex";
     heading3.style.margin = "20px 0 0 20px";
 
+    heading4.style.display = "flex";
+    heading4.style.margin = "20px 0 20px 20px";
+
     row1.style.display = "flex";
     row2.style.display = "flex";
     row3.style.display = "flex";
     row4.style.display = "flex";
     row5.style.display = "flex";
+    row6.style.display = "flex";
 
     musicbar.style.display = "flex";
     main.style.height = "100vh";
-    playSong().pause();
+   
+
     
 }
 
@@ -325,24 +340,23 @@ function playSong(songSrc, songTitle) {
     audio.src = songSrc;
     audio.play();
 
-
     document.getElementById("song-title").innerText = songTitle;
     document.getElementById("play-pause").innerHTML = "<h4><i class='fa-solid fa-pause'></i></h4>";
-
+   
 }
 
 function togglePlay() {
     if (audio.paused) {
         audio.play();
-        document.getElementById("play-pause").innerHTML = "<h4><i class='fa-solid fa-pause'></i></h4>";
+        document.getElementById("play-pause").innerHTML = "<h3><i class='fa-solid fa-pause'></i></h3>";
     } else {
         audio.pause();
-        document.getElementById("play-pause").innerHTML = "▶";
+        document.getElementById("play-pause").innerHTML = "<i class='fa-solid fa-play'></i>";
+
     }
 }
 
 function prevSong() {
-    currentIndex=currentSong;
     if (currentIndex > 0) {
         currentIndex--;
     } else {
@@ -352,12 +366,14 @@ function prevSong() {
 }
 
 function nextSong() {
-    if (currentIndex < songs.length - 1) {
-        currentIndex++;
-    } else {
+  
+     if (currentIndex < songs.length - 1) {
+         currentIndex++;
+     } else {
         currentIndex = 0;
-    }
-    playSong(songs[currentIndex].src, songs[currentIndex].title);
+     }
+      playSong(songs[currentIndex].src, songs[currentIndex].title);
+
 }
 
 audio.addEventListener("timeupdate", () => {
