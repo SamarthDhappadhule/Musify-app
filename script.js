@@ -48,6 +48,8 @@ function artist_data() {
     row5.style.display = "none";
 
     main.style.height = "100vh";
+ 
+    audio.pause();
 }
 
 function back_data() {
@@ -68,7 +70,8 @@ function back_data() {
 
     musicbar.style.display = "flex";
     main.style.height = "100vh";
-
+    playSong().pause();
+    
 }
 
 
@@ -97,8 +100,6 @@ back.addEventListener('click', () => {
 
 
 })
-
-
 
 
 
@@ -293,7 +294,7 @@ let songs = [
     { src: "musics/pehle bhi main.mp3", title: "Pehle Bhi Main" },
     { src: "musics/agar tum sath ho.mp3", title: "Agar Tun Sath Ho" },
     { src: "musics/hawayein.mp3", title: "Hawayein" },
-    { src: "musics/khulke jeene ka.mp3", title: "Khul ke Jeene" },
+    { src: "musics/khulke jeene ka.mp3", title: "Khulke Jeene ka" },
     { src: "musics/heeriye.mp3", title: "Heeriye" },
     { src: "musics/badtamiz dil.mp3", title: "Badtaeez Dil" },
     { src: "musics/makhna.mp3", title: "Makhna" },
@@ -312,27 +313,28 @@ let songs = [
     { src: "musics/sairat zhal ji.mp3", title: "Sairat" },
     { src: "musics/sukha kalale.mp3", title: "Sukha Kalale" },
     { src: "musics/bhijun gela vara.mp3", title: "Bhijun Gela Vara" },
-    { src: "musics/swapna chalun ale.mp3", title: "Swapna Chalun Ale" },
+    { src: "musics/swapna chalun ale.mp3", title: "Classmates" },
     { src: "musics/mala ved lagle.mp3", title: "Mala Ved Lagle" },
 
 ];
 let currentIndex = 0;
 let currentSong = null;
 function playSong(songSrc, songTitle) {
+    
     currentSong = songSrc;
     audio.src = songSrc;
     audio.play();
 
-    document.getElementById("song-title").innerText = songTitle;
-    document.getElementById("play-pause").innerText = "⏸";
 
+    document.getElementById("song-title").innerText = songTitle;
+    document.getElementById("play-pause").innerHTML = "<h4><i class='fa-solid fa-pause'></i></h4>";
 
 }
 
 function togglePlay() {
     if (audio.paused) {
         audio.play();
-        document.getElementById("play-pause").innerHTML = "<h4>⏸</h4>";
+        document.getElementById("play-pause").innerHTML = "<h4><i class='fa-solid fa-pause'></i></h4>";
     } else {
         audio.pause();
         document.getElementById("play-pause").innerHTML = "▶";
@@ -340,12 +342,13 @@ function togglePlay() {
 }
 
 function prevSong() {
+    currentIndex=currentSong;
     if (currentIndex > 0) {
         currentIndex--;
     } else {
         currentIndex = songs.length - 1;
     }
-    playSong(songs[currentIndex].src, songs[currentIndex].title);
+     playSong(songs[currentIndex].src, songs[currentIndex].title);
 }
 
 function nextSong() {

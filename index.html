@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musicfy</title>
+    <title>Musify</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
         integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -102,7 +102,7 @@
                         <p id="id3">A Dil Hai Mushkil</p>
                         <p id="id4">Pritam</p>
                     </div>
-                    <div class="crds" onclick="playSong('musics/humari adhuri Kahani.mp3 '  , 'Humari Adhuri Kahani' )">
+                    <div class="crds" onclick="playSong('musics/humari adhuri Kahani.mp3 '  , 'Adhuri Kahani' )">
                         <img src="photo3.jpg">
                         <p id="id3"> Adhuri Kahani</p>
                         <p id="id4">Jeet Ganguli </p>
@@ -141,9 +141,9 @@
                 </div>
 
                 <div class="row3">
-                    <div class="crds" onclick="playSong('musics/khulke jeene ka.mp3 '  , 'Khule ke Jeene Ka Tarika' )">
+                    <div class="crds" onclick="playSong('musics/khulke jeene ka.mp3 '  , 'Khulke Jeene ka' )">
                         <img src="photo11.jpg">
-                        <p id="id3">Khule Jeene Ka </p>
+                        <p id="id3">Khulke Jeene Ka </p>
                         <p id="id4">A.R Rahaman</p>
                     </div>
                     <div class="crds" onclick="playSong('musics/heeriye.mp3 '  , 'Heeriye' )">
@@ -167,7 +167,7 @@
                         <p id="id4">Mohit Chauhan</p>
                     </div>
                     <div class="crds"
-                        onclick="playSong('musics/kashmir main tu Kanyakumari.mp3 '  , 'Kashmier Main Tu Kanyakumari' )">
+                        onclick="playSong('musics/kashmir main tu Kanyakumari.mp3 '  , 'Kanyakumari' )">
                         <img src="photo16.jpg">
                         <p id="id3">Kanyakumari</p>
                         <p id="id4">Arjit Singh , Niti Mohan</p>
@@ -204,7 +204,7 @@
                     </div>
                     <div class="row4_cards" onclick="playSong('musics/dhaga dhaga.mp3'  , 'Dhaga Dhaga' )">
                         <img src="photo23.jpg">
-                        <p id="id5">Dagha Dagha</p>
+                        <p id="id5">Dhaga Dhaga</p>
                         <p id="id6">Harsh Warve</p>
                     </div>
                     <div class="row4_cards" onclick="playSong('musics/gulabi sadi.mp3'  , 'Gulabi Sadi' )">
@@ -248,7 +248,7 @@
                     </div>
                     <div class="row5_cards" onclick="playSong('musics/swapna chalun ale.mp3 '  , 'Swapna Chalun Ale')">
                         <img src="photo31.jpg">
-                        <p id="id5">Swapna Chalun Ale</p>
+                        <p id="id5">Classmates</p>
                         <p id="id6">Sonu Nigam</p>
                     </div>
                     <div class="row5_cards" onclick="playSong('musics/mala ved lagle.mp3'  , 'Mala Ved Lagle' )">
@@ -967,7 +967,7 @@
         <span class="stroke"></span>
 
         <p id="song-title">Select a song...</p>
-        <input type="range" id="progress-bar" value="0" maxvalue="100">
+        <input type="range" id="progress-bar" value="0"  min="0" maxvalue="100">
 
         <div class="btns">
             <button onclick="prevSong()"><i class="fa-solid fa-backward"></i></button>
