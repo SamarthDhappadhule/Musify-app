@@ -339,7 +339,7 @@ function playSong(songSrc, songTitle) {
     currentSong = songSrc;
     audio.src = songSrc;
     audio.play();
-
+    audio.loop=true;
     document.getElementById("song-title").innerText = songTitle;
     document.getElementById("play-pause").innerHTML = "<h4><i class='fa-solid fa-pause'></i></h4>";
    
@@ -348,6 +348,7 @@ function playSong(songSrc, songTitle) {
 function togglePlay() {
     if (audio.paused) {
         audio.play();
+        
         document.getElementById("play-pause").innerHTML = "<h3><i class='fa-solid fa-pause'></i></h3>";
     } else {
         audio.pause();
@@ -377,11 +378,11 @@ function nextSong() {
 }
 
 audio.addEventListener("timeupdate", () => {
-    let progress = (audio.currentTime / audio.duration) * 100;
+    let progress = (audio.currentTime /audio.duration) * 100;
     document.getElementById("progress-bar").value = progress;
 });
 
 document.getElementById("progress-bar").addEventListener("input", (e) => {
-    let seekTime = (e.target.value / 100) * audio.duration;
-    audio.currentTime = seekTime;
+    let seekTime = (e.target.value / 100) *audio.duration;
+ audio.currentTime = seekTime;
 });

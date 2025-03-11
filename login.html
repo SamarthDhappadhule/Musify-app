@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username:</label><br><br>
+            <input type="text" id="username" placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label><br><br>
+            <input type="password" id="password" placeholder="Enter Password">
+        </div>
+        <button onclick="login()">Login</button>
+        <div class="auth-buttons">
+            <a href="#" onclick="showRegistration()">Register</a> | <a href="#" onclick="skipLogin()">Skip</a>
+        </div>
+    </div>
+
+    <div class="container registration-form" id="registrationForm">
+        <h2>Registration</h2>
+        <div class="form-group">
+            <label for="newUsername">Username:</label><br><br>
+            <input type="text" id="newUsername" placeholder="Enter Username">
+        </div>
+        <div class="form-group"><br>
+            <label for="newPassword">Password:</label><br><br>
+            <input type="password" id="newPassword" placeholder="Enter Password">
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label><br><br>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+        </div>
+        <button onclick="register()">Register</button>
+        <div class="auth-buttons">
+            <a href="#" onclick="cancelRegistration()">Cancel</a>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
